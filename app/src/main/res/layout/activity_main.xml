@@ -5,22 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     tools:context="com.dummystudent.xd720p.diplomus.MainActivity">
 
     <Button
-        android:layout_centerInParent="true"
+        android:id="@+id/take_photo_btn"
+        android:layout_alignParentBottom="true"
         android:text="Take a photo"
+        android:layout_marginBottom="60dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <ImageView
         android:id="@+id/photo"
+        android:layout_above="@+id/take_photo_btn"
+        android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
+        android:id="@+id/number"
+        android:layout_above="@+id/photo"
+        android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/number"/>
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
