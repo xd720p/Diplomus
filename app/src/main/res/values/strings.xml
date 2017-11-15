@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Diplomus</string>
+    <string name="pick_photo">Pick photo</string>
 </resources>
