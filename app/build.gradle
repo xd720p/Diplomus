@@ -30,4 +30,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'com.github.SandroMachado:openalpr-android:1.1.2'
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.android.gms:play-services-vision:9.4.0+'
 }
