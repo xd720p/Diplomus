@@ -121,12 +121,13 @@ public class MainActivity extends AppCompatActivity {
                 .setBitmap(photo)
                 .build();
         SparseArray<TextBlock> textBlocks = textRecognizer.detect(imageFrame);
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < textBlocks.size(); i++) {
             TextBlock textBlock = textBlocks.get(textBlocks.keyAt(i));
-
+            result.append(textBlock.getValue()).append("    ");
             Log.d(MainActivity.class.getSimpleName(), textBlock.getValue());
-            // Do something with value
         }
+        numberView.setText(result.toString());
     }
 
     @OnClick(R.id.take_photo_btn)
@@ -148,8 +149,6 @@ public class MainActivity extends AppCompatActivity {
             final Bitmap bitmap = BitmapFactory.decodeFile(destination.getAbsolutePath(), options);
             Picasso.with(MainActivity.this).load(destination).fit().centerCrop().into(photoView);
             startRecognition(bitmap);
-            numberView.setText("Processing");
-
 //            startRecognition(((BitmapDrawable) photoView.getDrawable()).getBitmap());
 
 //            AsyncTask.execute(new Runnable() {
